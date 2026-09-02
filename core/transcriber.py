@@ -1,6 +1,6 @@
 import whisper
 import os
-WHISPER_MODEL=os.getenv("WHISPER_MODEL","small")
+WHISPER_MODEL=os.getenv("WHISPER_MODEL","tiny")
 _model=None
 
 
