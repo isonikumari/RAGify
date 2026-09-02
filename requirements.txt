@@ -1,0 +1,44 @@
+# ===== UI =====
+streamlit>=1.37.0
+
+# ===== Audio acquisition =====
+yt-dlp>=2024.8.6
+ffmpeg-python>=0.2.0          # requires system ffmpeg installed separately
+
+# ===== Local transcription (Whisper) =====
+openai-whisper>=20231117
+# faster-whisper>=1.0.3       # optional: swap in for faster/lighter local inference
+torch>=2.2.0
+torchaudio>=2.2.0
+
+# ===== Hindi -> English translation =====
+# googletrans==4.0.0rc1       # ❌ conflicts with httpx
+deep-translator>=1.11.4       # ✅ replacement, supports Google Translate and others
+# indic-trans>=0.0.5          # alternative: offline Indic language translation
+# transformers>=4.42.0        # alternative: use an MT model (e.g. Helsinki-NLP/opus-mt-hi-en)
+sentencepiece>=0.2.0          # needed if using transformer-based translation models
+
+# ===== LangChain + LCEL + Mistral (free API) =====
+langchain>=0.2.14
+langchain-core>=0.2.35
+langchain-community>=0.2.12
+langchain-mistralai>=0.1.13
+
+# ===== RAG: Vector store + embeddings =====
+chromadb>=0.5.5
+langchain-chroma>=0.1.3
+langchain-huggingface>=0.0.3
+sentence-transformers>=3.0.1
+
+# ===== PDF / TXT export =====
+fpdf2>=2.7.9
+reportlab>=4.2.2               # optional alternative PDF generator
+
+# ===== Utilities =====
+python-dotenv>=1.0.1
+pydantic>=2.8.2
+numpy>=1.26.4
+tqdm>=4.66.5
+pydub>=0.25.1
+yt-dlp>=2024.8.6
+
